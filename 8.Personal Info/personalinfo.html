@@ -4,11 +4,63 @@
 <body>
 <fieldset>
 <legend></legend>
+<body>
+	 <script >
+            function validation()
+            {
+                let name=document.getElementById("name");
+                if(name.value.trim()=="")
+                {
+                    alert("Blank field is not allow");
+                }
+
+                else if(name.value.trim().length<2 || name.value.trim().length>20)
+                {
+                    alert("Character must be 2 to 20");
+                }
+
+                else if(!isNaN(name.value))
+                {
+                    alert("Number is not allow");
+                }
+
+
+                else
+                {
+                    alert("Submit successfully");
+
+                }
+
+                let email=document.getElementById("email").value;
+               
+               var regex=/^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/
+              
+               if(regex.test(email))
+               {
+                 alert("");
+                   return true;
+
+               }
+               else
+               {
+                 alert("Please Enter Vailed Email Id");
+                   return false;
+
+               }
+               
+
+
+
+
+
+            }
+
+        </script>
 <form>
 	<table border="1">
 		<tr height="100px">
 			<td colspan="3">
-				<center>Personal Information</center>
+				<h1>Personal Information</h1>
 			</td>
 		</tr>
 		<tr>
@@ -107,6 +159,7 @@
 
 	</table>
 </form>
+</body>
 </fieldset>
 </body>
 </head>
